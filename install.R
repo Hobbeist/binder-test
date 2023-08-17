@@ -2,8 +2,6 @@
 
 install.packages("tidyverse")
 install.packages("tidyr")
-install.packages("phyloseq")
-install.packages("cowplot")
 install.packages("stringr")
 install.packages("mapdata")
 install.packages("sf")
@@ -20,6 +18,7 @@ install.packages(
   "microViz",
   repos = c(davidbarnett = "https://david-barnett.r-universe.dev", getOption("repos"))
 )
+BiocManager::install("phyloseq")
 BiocManager::install("decontam")
 devtools::install_github("tpq/propr")
 BiocManager::install("ALDEx2")
