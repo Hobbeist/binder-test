@@ -1,3 +1,5 @@
+# Install required R packages for the analysis
+
 install.packages("tidyverse")
 install.packages("tidyr")
 install.packages("phyloseq")
@@ -10,24 +12,18 @@ install.packages("rgdal")
 install.packages("terra")
 install.packages("viridis")
 install.packages("remotes")   ## run this line if you do not already have remotes installed
-library(remotes)
 remotes::install_github("adw96/breakaway")
 remotes::install_github("adw96/DivNet")
-library(DivNet)
 if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
 BiocManager::install(c("phyloseq", "microbiome", "ComplexHeatmap"), update = FALSE)
 install.packages(
   "microViz",
   repos = c(davidbarnett = "https://david-barnett.r-universe.dev", getOption("repos"))
 )
-library(microViz)
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("decontam")
-library(decontam)
-library(zCompositions)
 devtools::install_github("tpq/propr")
-library("propr")
 BiocManager::install("ALDEx2")
 BiocManager::install("EnhancedVolcano")
 install.packages("vegan")
