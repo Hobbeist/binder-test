@@ -14,14 +14,12 @@ install.packages("viridis")
 install.packages("remotes")   ## run this line if you do not already have remotes installed
 remotes::install_github("adw96/breakaway")
 remotes::install_github("adw96/DivNet")
-if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+install.packages("BiocManager")
 BiocManager::install(c("phyloseq", "microbiome", "ComplexHeatmap"), update = FALSE)
 install.packages(
   "microViz",
   repos = c(davidbarnett = "https://david-barnett.r-universe.dev", getOption("repos"))
 )
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
 BiocManager::install("decontam")
 devtools::install_github("tpq/propr")
 BiocManager::install("ALDEx2")
